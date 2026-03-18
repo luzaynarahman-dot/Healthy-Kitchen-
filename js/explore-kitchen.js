@@ -1,30 +1,3 @@
-// ===== FLOATING ACTION BUTTON =====
-const fabMain = document.getElementById('fabMain');
-const floatingAction = document.querySelector('.floating-action');
-
-if (fabMain) {
-    fabMain.addEventListener('click', () => {
-        floatingAction.classList.toggle('active');
-        
-        // Rotate icon
-        const icon = fabMain.querySelector('i');
-        if (floatingAction.classList.contains('active')) {
-            icon.style.transform = 'rotate(45deg)';
-        } else {
-            icon.style.transform = 'rotate(0deg)';
-        }
-    });
-    
-    // Close FAB when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!floatingAction.contains(e.target)) {
-            floatingAction.classList.remove('active');
-            const icon = fabMain.querySelector('i');
-            icon.style.transform = 'rotate(0deg)';
-        }
-    });
-}
-
 // ===== SEARCH FUNCTIONALITY =====
 const searchInput = document.querySelector('.search-input');
 const searchBtn = document.querySelector('.search-btn');
@@ -32,6 +5,7 @@ const kitchenCards = document.querySelectorAll('.kitchen-card');
 
 function searchKitchens() {
     const searchTerm = searchInput.value.toLowerCase().trim();
+    let visibleCount = 0;
     
     kitchenCards.forEach(card => {
         const kitchenName = card.querySelector('.kitchen-name').textContent.toLowerCase();
@@ -43,23 +17,25 @@ function searchKitchens() {
             location.includes(searchTerm) ||
             searchTerm === '') {
             card.style.display = 'block';
+            visibleCount++;
         } else {
             card.style.display = 'none';
         }
     });
     
-    // Update count
-    const visibleCount = document.querySelectorAll('.kitchen-card[style="display: block"]').length;
+    // Update count only
     const countSpan = document.querySelector('.count');
     if (countSpan) {
         countSpan.textContent = `(${visibleCount} kitchens)`;
     }
 }
 
+// Search button click
 if (searchBtn) {
     searchBtn.addEventListener('click', searchKitchens);
 }
 
+// Search on Enter key
 if (searchInput) {
     searchInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
@@ -78,62 +54,32 @@ filterBtns.forEach(btn => {
         // Add active to clicked
         btn.classList.add('active');
         
-        const filter = btn.textContent.toLowerCase();
+        const filter = btn.textContent.toLowerCase().trim();
         
+        // Filter logic
         kitchenCards.forEach(card => {
             if (filter === 'all') {
                 card.style.display = 'block';
             } else if (filter === 'most popular') {
-                // You can add logic here
-                card.style.display = 'block';
+                const rating = parseFloat(card.querySelector('.rating-text').textContent.split(' ')[0]);
+                card.style.display = rating >= 4.8 ? 'block' : 'none';
             } else if (filter === 'new') {
-                card.style.display = 'block';
+                const index = Array.from(kitchenCards).indexOf(card);
+                card.style.display = index < 3 ? 'block' : 'none';
             } else if (filter === 'near you') {
-                card.style.display = 'block';
+                const location = card.querySelector('.kitchen-meta span:first-child').textContent;
+                card.style.display = (location.includes('USA') || location.includes('New York')) ? 'block' : 'none';
             }
         });
-    });
-});
-
-// ===== FOLLOW BUTTONS =====
-const followBtns = document.querySelectorAll('.follow-btn');
-
-followBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-        if (this.textContent === '+ Follow') {
-            this.textContent = 'Following ✓';
-            this.style.background = '#4CAF50';
-            this.style.color = 'white';
-        } else {
-            this.textContent = '+ Follow';
-            this.style.background = 'transparent';
-            this.style.color = '#4CAF50';
+        
+        // Update count
+        const visibleCount = document.querySelectorAll('.kitchen-card[style="display: block"]').length;
+        const countSpan = document.querySelector('.count');
+        if (countSpan) {
+            countSpan.textContent = `(${visibleCount} kitchens)`;
         }
     });
 });
-
-// ===== LOAD MORE BUTTON =====
-const loadMoreBtn = document.querySelector('.load-more-btn');
-let currentPage = 1;
-
-if (loadMoreBtn) {
-    loadMoreBtn.addEventListener('click', function() {
-        currentPage++;
-        
-        // Simulate loading
-        this.textContent = 'Loading...';
-        this.disabled = true;
-        
-        setTimeout(() => {
-            // Here you would load more kitchens from your backend
-            this.textContent = 'Load More Kitchens';
-            this.disabled = false;
-            
-            // Show success message
-            alert(`Page ${currentPage} loaded! (Demo - Add more cards here)`);
-        }, 1000);
-    });
-}
 
 // ===== POPULAR TAGS =====
 const tags = document.querySelectorAll('.tag');
@@ -141,34 +87,106 @@ const tags = document.querySelectorAll('.tag');
 tags.forEach(tag => {
     tag.addEventListener('click', (e) => {
         e.preventDefault();
-        const tagText = tag.textContent;
-        searchInput.value = tagText;
+        searchInput.value = tag.textContent;
         searchKitchens();
     });
 });
 
-// ===== RECIPE PREVIEW CLICK =====
-const previewItems = document.querySelectorAll('.preview-item');
+// ===== FOLLOW BUTTONS =====
+const followBtns = document.querySelectorAll('.follow-btn');
 
-previewItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const recipeName = item.querySelector('.recipe-name')?.textContent || 'Recipe';
-        alert(`Viewing recipe: ${recipeName}`);
-        // Here you would navigate to recipe page
+followBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        
+        if (this.textContent === '+ Follow') {
+            this.textContent = 'Following ✓';
+            this.style.background = '#4CAF50';
+            this.style.color = 'white';
+            this.style.border = 'none';
+        } else {
+            this.textContent = '+ Follow';
+            this.style.background = 'transparent';
+            this.style.color = '#4CAF50';
+            this.style.border = '2px solid #4CAF50';
+        }
+        
+        // Simple animation only
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
     });
 });
 
 // ===== VIEW KITCHEN BUTTONS =====
-const viewBtns = document.querySelectorAll('.view-kitchen-btn');
+// Just let HTML links work naturally - no JavaScript interference
 
-viewBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const kitchenName = btn.closest('.kitchen-card').querySelector('.kitchen-name').textContent;
-        alert(`Navigating to ${kitchenName}'s kitchen...`);
-        // Here you would go to kitchen detail page
+// ===== RECIPE PREVIEW CLICK =====
+const previewItems = document.querySelectorAll('.preview-item:not(.more)');
+
+previewItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // Just animation, no alerts
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
     });
 });
+
+// ===== "MORE" PREVIEW CLICK =====
+const morePreviews = document.querySelectorAll('.preview-item.more');
+
+morePreviews.forEach(item => {
+    item.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // Just animation, no alerts
+        this.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            this.style.transform = '';
+        }, 150);
+    });
+});
+
+// ===== LOAD MORE BUTTON =====
+const loadMoreBtn = document.querySelector('.load-more-btn');
+
+if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', function() {
+        // Simple loading state
+        const originalText = this.textContent;
+        this.textContent = 'Loading...';
+        this.disabled = true;
+        
+        setTimeout(() => {
+            this.textContent = originalText;
+            this.disabled = false;
+        }, 800);
+    });
+}
+
+// ===== FLOATING ACTION BUTTON =====
+const fabMain = document.getElementById('fabMain');
+const floatingAction = document.querySelector('.floating-action');
+
+if (fabMain) {
+    fabMain.addEventListener('click', () => {
+        floatingAction.classList.toggle('active');
+        
+        const icon = fabMain.querySelector('i');
+        icon.style.transform = floatingAction.classList.contains('active') ? 'rotate(45deg)' : 'rotate(0deg)';
+    });
+    
+    // Close FAB when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!floatingAction.contains(e.target)) {
+            floatingAction.classList.remove('active');
+            fabMain.querySelector('i').style.transform = 'rotate(0deg)';
+        }
+    });
+}
 
 // ===== SCROLL ANIMATION =====
 const observer = new IntersectionObserver((entries) => {
@@ -180,14 +198,15 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 });
 
-kitchenCards.forEach(card => {
+// Animate cards
+document.querySelectorAll('.kitchen-card').forEach(card => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
     card.style.transition = 'all 0.6s ease';
     observer.observe(card);
 });
 
-// ===== INITIAL COUNT =====
+// Initial count
 const initialCount = kitchenCards.length;
 const countSpan = document.querySelector('.count');
 if (countSpan) {
