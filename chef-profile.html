@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef Profile | Emine Teyze - Healthy Kitchen</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/chef-profile.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+    <div class="logo">Healthy<span>Kitchen</span></div>
+    <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="explore-kitchen.html" class="nav-link">Explore</a>
+        <a href="#" class="nav-link active">Chef Profile</a>
+        <button onclick="location.href='login.html'" class="login-btn">Login</button>
+    </div>
+</nav>
+
+<!-- ===== CHEF PROFILE HEADER ===== -->
+<section class="chef-header">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <div class="chef-cover">
+            <img src="food-blog-img/kitchen-cover.jpg" alt="Kitchen Cover" class="cover-img">
+        </div>
+        
+        <div class="chef-info-wrapper">
+            <div class="chef-avatar-section">
+                <img src="food-blog-img/kitchen-pfp(1).png" alt="Emine Teyze" class="chef-avatar">
+                <div class="chef-status">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verified Chef</span>
+                </div>
+            </div>
+            
+            <div class="chef-main-info">
+                <div class="chef-name-section">
+                    <h1 class="chef-name">Emine Teyze</h1>
+                    <p class="chef-title">Sultan'ın Sofrası</p>
+                    <div class="chef-badges">
+                        <span class="badge"><i class="fas fa-medal"></i> Master Chef</span>
+                        <span class="badge"><i class="fas fa-clock"></i> Member since 2022</span>
+                        <span class="badge"><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span>
+                    </div>
+                </div>
+                
+                <div class="chef-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">127</span>
+                        <span class="stat-label">Recipes</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">15.2k</span>
+                        <span class="stat-label">Followers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">4.9</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">3.4k</span>
+                        <span class="stat-label">Reviews</span>
+                    </div>
+                </div>
+                
+                <div class="chef-actions">
+                    <button class="follow-btn" id="followBtn">
+                        <i class="fas fa-plus"></i>
+                        <span>Follow</span>
+                    </button>
+                    <button class="message-btn">
+                        <i class="fas fa-envelope"></i>
+                        <span>Message</span>
+                    </button>
+                    <button class="share-btn" id="shareBtn">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CHEF BIO SECTION ===== -->
+<section class="chef-bio-section">
+    <div class="container">
+        <div class="bio-wrapper">
+            <div class="bio-content">
+                <h2 class="section-subtitle">About Chef</h2>
+                <p class="bio-text">
+                    Merhaba! I'm Emine Teyze, a traditional Turkish chef from Istanbul with over 25 years of cooking experience. 
+                    I learned the secrets of Ottoman cuisine from my grandmother and have been sharing these authentic recipes 
+                    with the world. My kitchen "Sultan'ın Sofrası" (Sultan's Table) brings the rich flavors of Anatolia to your home.
+                </p>
+                <p class="bio-text">
+                    I believe in using fresh, organic ingredients and traditional cooking methods. Every recipe I share has been 
+                    passed down through generations and tested in my own kitchen. Join me on this delicious journey through 
+                    Turkish cuisine!
+                </p>
+                
+                <div class="chef-specialties">
+                    <h3>Specialties:</h3>
+                    <div class="specialty-tags">
+                        <span class="specialty-tag">Traditional Turkish</span>
+                        <span class="specialty-tag">Ottoman Cuisine</span>
+                        <span class="specialty-tag">Baklava</span>
+                        <span class="specialty-tag">Kebabs</span>
+                        <span class="specialty-tag">Mezes</span>
+                        <span class="specialty-tag">Desserts</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chef-quick-info">
+                <div class="info-card">
+                    <h3>Quick Info</h3>
+                    <ul class="info-list">
+                        <li><i class="fas fa-globe"></i> <strong>Cuisine:</strong> Turkish, Ottoman</li>
+                        <li><i class="fas fa-language"></i> <strong>Languages:</strong> Turkish, English</li>
+                        <li><i class="fas fa-clock"></i> <strong>Experience:</strong> 25+ years</li>
+                        <li><i class="fas fa-trophy"></i> <strong>Awards:</strong> Golden Ladle 2023</li>
+                        <li><i class="fas fa-users"></i> <strong>Classes:</strong> 48 students</li>
+                    </ul>
+                </div>
+                
+                <div class="social-card">
+                    <h3>Connect with Chef</h3>
+                    <div class="chef-social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i> @emine_teyze</a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i> Emine's Kitchen</a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i> Turkish Recipes</a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i> Sultan's Table</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FEATURED RECIPES SECTION ===== -->
+<section class="featured-recipes">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Chef's Special Recipes</h2>
+            <a href="#" class="view-all-link">View All (127) <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="recipes-grid">
+            <!-- Recipe Card 1 -->
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="food-blog-img/doner-kebab.png" alt="Döner Kebab">
+                    <span class="recipe-badge">🔥 Most Popular</span>
+                    <button class="save-recipe"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="recipe-info">
+                    <h3 class="recipe-title">Authentic Döner Kebab</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 45 min</span>
+                        <span><i class="fas fa-fire"></i> 520 cal</span>
+                        <span><i class="fas fa-star"></i> 4.9 (234)</span>
+                    </div>
+                    <p class="recipe-desc">Traditional Turkish döner with perfectly spiced meat...</p>
+                    <div class="recipe-footer">
+                        <span class="difficulty easy"><i class="fas fa-thermometer-half"></i> Medium</span>
+                        <a href="#" class="view-recipe">View Recipe →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recipe Card 2 -->
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="food-blog-img/lahmachun.png" alt="Lahmacun">
+                    <span class="recipe-badge">🥇 Chef's Pick</span>
+                    <button class="save-recipe"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="recipe-info">
+                    <h3 class="recipe-title">Turkish Lahmacun</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 1.5 hr</span>
+                        <span><i class="fas fa-fire"></i> 380 cal</span>
+                        <span><i class="fas fa-star"></i> 5.0 (189)</span>
+                    </div>
+                    <p class="recipe-desc">Crispy thin flatbread topped with spiced minced meat...</p>
+                    <div class="recipe-footer">
+                        <span class="difficulty medium"><i class="fas fa-thermometer-half"></i> Medium</span>
+                        <a href="#" class="view-recipe">View Recipe →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recipe Card 3 -->
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="food-blog-img/manti.png" alt="Manti">
+                    <span class="recipe-badge">🥟 Family Secret</span>
+                    <button class="save-recipe"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="recipe-info">
+                    <h3 class="recipe-title">Handmade Manti</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 2 hr</span>
+                        <span><i class="fas fa-fire"></i> 450 cal</span>
+                        <span><i class="fas fa-star"></i> 4.8 (156)</span>
+                    </div>
+                    <p class="recipe-desc">Tiny dumplings filled with spiced lamb, served with garlic yogurt...</p>
+                    <div class="recipe-footer">
+                        <span class="difficulty hard"><i class="fas fa-thermometer-half"></i> Hard</span>
+                        <a href="#" class="view-recipe">View Recipe →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recipe Card 4 -->
+            <div class="recipe-card">
+                <div class="recipe-image">
+                    <img src="food-blog-img/baklava.png" alt="Baklava">
+                    <span class="recipe-badge">🍯 Signature</span>
+                    <button class="save-recipe"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="recipe-info">
+                    <h3 class="recipe-title">Pistachio Baklava</h3>
+                    <div class="recipe-meta">
+                        <span><i class="far fa-clock"></i> 3 hr</span>
+                        <span><i class="fas fa-fire"></i> 320 cal</span>
+                        <span><i class="fas fa-star"></i> 5.0 (312)</span>
+                    </div>
+                    <p class="recipe-desc">Layers of flaky phyllo with crushed pistachios and honey syrup...</p>
+                    <div class="recipe-footer">
+                        <span class="difficulty hard"><i class="fas fa-thermometer-half"></i> Hard</span>
+                        <a href="#" class="view-recipe">View Recipe →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RECIPE CATEGORIES ===== -->
+<section class="recipe-categories">
+    <div class="container">
+        <h2 class="section-title">Browse by Category</h2>
+        
+        <div class="categories-grid">
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4>Main Dishes</h4>
+                <span class="category-count">48 recipes</span>
+            </a>
+            
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </div>
+                <h4>Appetizers</h4>
+                <span class="category-count">23 recipes</span>
+            </a>
+            
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-cake-candles"></i>
+                </div>
+                <h4>Desserts</h4>
+                <span class="category-count">31 recipes</span>
+            </a>
+            
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-bread-slice"></i>
+                </div>
+                <h4>Breads</h4>
+                <span class="category-count">15 recipes</span>
+            </a>
+            
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <h4>Vegetarian</h4>
+                <span class="category-count">19 recipes</span>
+            </a>
+            
+            <a href="#" class="category-card">
+                <div class="category-icon">
+                    <i class="fas fa-wine-bottle"></i>
+                </div>
+                <h4>Drinks</h4>
+                <span class="category-count">12 recipes</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REVIEWS SECTION ===== -->
+<section class="reviews-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">What People Are Saying</h2>
+            <div class="rating-summary">
+                <div class="average-rating">4.9</div>
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="total-reviews">Based on 3,428 reviews</span>
+            </div>
+        </div>
+        
+        <div class="reviews-grid">
+            <!-- Review 1 -->
+            <div class="review-card">
+                <div class="reviewer">
+                    <img src="food-blog-img/user-1.jpg" alt="User" class="reviewer-img">
+                    <div class="reviewer-info">
+                        <h4>Mehmet Yilmaz</h4>
+                        <div class="reviewer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">
+                    "Emine Teyze's manti recipe is exactly like my grandmother used to make! The instructions were so clear and the result was perfect. Thank you for sharing these family recipes!"
+                </p>
+                <div class="review-footer">
+                    <span class="review-date">2 weeks ago</span>
+                    <span class="review-recipe">Recipe: Handmade Manti</span>
+                </div>
+            </div>
+            
+            <!-- Review 2 -->
+            <div class="review-card">
+                <div class="reviewer">
+                    <img src="food-blog-img/user-2.jpg" alt="User" class="reviewer-img">
+                    <div class="reviewer-info">
+                        <h4>Sarah Johnson</h4>
+                        <div class="reviewer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">
+                    "I tried the baklava recipe for a family gathering and everyone was amazed! The step-by-step photos really helped. Best Turkish food I've ever made at home."
+                </p>
+                <div class="review-footer">
+                    <span class="review-date">1 month ago</span>
+                    <span class="review-recipe">Recipe: Pistachio Baklava</span>
+                </div>
+            </div>
+            
+            <!-- Review 3 -->
+            <div class="review-card">
+                <div class="reviewer">
+                    <img src="food-blog-img/user-3.jpg" alt="User" class="reviewer-img">
+                    <div class="reviewer-info">
+                        <h4>Ahmet Demir</h4>
+                        <div class="reviewer-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-text">
+                    "Her lahmacun recipe is the real deal! The dough was perfect and the meat mixture was so flavorful. Will definitely try more recipes from Emine Teyze."
+                </p>
+                <div class="review-footer">
+                    <span class="review-date">3 weeks ago</span>
+                    <span class="review-recipe">Recipe: Turkish Lahmacun</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="load-more-reviews">
+            <button class="load-more-btn">Load More Reviews</button>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COOKING CLASSES SECTION ===== -->
+<section class="classes-section">
+    <div class="container">
+        <h2 class="section-title">Live Cooking Classes with Chef</h2>
+        
+        <div class="classes-grid">
+            <div class="class-card">
+                <div class="class-date">
+                    <span class="day">25</span>
+                    <span class="month">MAR</span>
+                </div>
+                <div class="class-info">
+                    <h4>Mastering Turkish Kebabs</h4>
+                    <p><i class="fas fa-clock"></i> 7:00 PM - 9:00 PM EST</p>
+                    <p><i class="fas fa-users"></i> 24 spots left</p>
+                </div>
+                <button class="join-class-btn">Join for $25</button>
+            </div>
+            
+            <div class="class-card">
+                <div class="class-date">
+                    <span class="day">28</span>
+                    <span class="month">MAR</span>
+                </div>
+                <div class="class-info">
+                    <h4>Baklava Workshop</h4>
+                    <p><i class="fas fa-clock"></i> 6:00 PM - 8:30 PM EST</p>
+                    <p><i class="fas fa-users"></i> 12 spots left</p>
+                </div>
+                <button class="join-class-btn">Join for $35</button>
+            </div>
+            
+            <div class="class-card">
+                <div class="class-date">
+                    <span class="day">02</span>
+                    <span class="month">APR</span>
+                </div>
+                <div class="class-info">
+                    <h4>Turkish Breakfast Feast</h4>
+                    <p><i class="fas fa-clock"></i> 10:00 AM - 12:30 PM EST</p>
+                    <p><i class="fas fa-users"></i> 18 spots left</p>
+                </div>
+                <button class="join-class-btn">Join for $30</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FLOATING ACTION BUTTON ===== -->
+<div class="floating-action">
+    <button class="fab-main" id="fabMain">
+        <i class="fas fa-plus"></i>
+    </button>
+    
+    <div class="fab-menu" id="fabMenu">
+        <a href="#" class="fab-item" style="--i:1">
+            <i class="fas fa-receipt"></i>
+            <span>Request Recipe</span>
+        </a>
+        <a href="#" class="fab-item" style="--i:2">
+            <i class="fas fa-question-circle"></i>
+            <span>Ask Chef</span>
+        </a>
+        <a href="#" class="fab-item" style="--i:3">
+            <i class="fas fa-gift"></i>
+            <span>Gift Class</span>
+        </a>
+    </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-logo">Healthy<span>Kitchen</span></div>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+        <p class="copyright">&copy; 2026 Healthy Kitchen. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/chef-profile.js"></script>
+</body>
+</html>
