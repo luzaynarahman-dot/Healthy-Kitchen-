@@ -54,28 +54,28 @@ const chefDatabase = {
         }
     },
     
-    'ayse': {
-        name: 'Ayşe Hatun',
-        title: 'Anatolian Kitchen',
-        location: 'Izmir, Turkey',
+    'ruby': {
+        name: 'Ruby Rahman',
+        title: 'Ghoroa Rannabanna',
+        location: 'Dhaka, Bangladesh',
         recipes: '94',
         followers: '12.3k',
         rating: '5.0',
         reviews: '2.8k',
-        bio: "Hoş geldiniz! I'm Ayşe, sharing authentic Anatolian recipes passed down for generations.",
+        bio: "As-salamu alaykum! I'm Ruby Rahman, sharing authentic Bengali home-style recipes passed down through generations in my family.",
         bio2: 'My cooking combines traditional Turkish techniques with fresh village ingredients.',
-        avatar: 'food-blog-img/kitchen-pfp(1).png',
+        avatar: 'food-blog-img/kitchen-pfp(2).png',
         cover: 'food-blog-img/kitchen-cover.jpg',
-        specialties: ['Vegetarian Turkish', 'Village Cooking', 'Bread Baking', 'Olive Oil Dishes'],
-        languages: 'Turkish, English',
-        experience: '30+ years',
+        specialties: ['Authentic Bengali Cuisines', 'Village Cooking', 'Baking', 'Traditional Desserts'],
+        languages: 'Bengali, English',
+        experience: '15+ years',
         awards: 'Traditional Cuisine Award 2023',
         students: '67',
         social: {
-            instagram: '@ayse_anatolian',
-            youtube: 'Anatolian Kitchen',
-            pinterest: 'Turkish Village Recipes',
-            facebook: 'Ayşe\'s Anatolian Table'
+            instagram: '@ruby\'s_kitchen',
+            youtube: 'Ghoroa Rannabanna',
+            pinterest: 'Ghoroa Rannabanna',
+            facebook: 'ruby\'s kitchen'
         }
     },
     
