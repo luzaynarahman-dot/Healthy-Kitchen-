@@ -114,7 +114,7 @@ const chefDatabase = {
         reviews: '3.2k',
         bio: "Konnichiwa! I'm Chef Kenji Tanaka, sharing the art of Japanese cuisine.",
         bio2: 'Precision, respect for ingredients, and beautiful presentation - the Japanese way.',
-        avatar: 'food-blog-img/kitchen-pfp(1).png',
+        avatar: 'food-blog-img/kitchen-pfp(3).png',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Sushi', 'Knife Skills', 'Japanese Soups', 'Tempura', 'Bento'],
         languages: 'Japanese, English',
