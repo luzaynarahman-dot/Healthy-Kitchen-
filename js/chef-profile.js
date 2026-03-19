@@ -2,7 +2,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const chefId = urlParams.get('chef') || 'emine';
 
-// ===== CHEF DATABASE WITH RECIPE MAPPING =====
+// ===== CHEF DATABASE WITH CORRECT QUICK INFO =====
 const chefDatabase = {
     'emine': {
         name: 'Emine Teyze',
@@ -17,6 +17,8 @@ const chefDatabase = {
         avatar: 'food-blog-img/kitchen-pfp(1).png',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Traditional Turkish', 'Ottoman Cuisine', 'Baklava', 'Kebabs', 'Mezes', 'Desserts'],
+        // QUICK INFO - specific for Emine
+        cuisine: 'Turkish, Ottoman',
         languages: 'Turkish, English',
         experience: '25+ years',
         awards: 'Golden Ladle 2023',
@@ -27,7 +29,6 @@ const chefDatabase = {
             pinterest: 'Turkish Recipes',
             facebook: 'Sultan\'s Table'
         },
-        // EXACT recipes from explore page
         recipeList: [
             {
                 name: 'Authentic Döner Kebab',
@@ -89,6 +90,8 @@ const chefDatabase = {
         avatar: 'food-blog-img/kitchen-pfp.jpeg',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Quick Meals', 'Healthy Breakfast', 'Meal Prep', 'Low-Calorie', 'High Protein'],
+        // QUICK INFO - specific for Cool Dude
+        cuisine: 'American, International',
         languages: 'English, Spanish',
         experience: '8 years',
         awards: 'Rising Chef 2024',
@@ -99,7 +102,6 @@ const chefDatabase = {
             pinterest: 'Quick Healthy Meals',
             facebook: 'Lazy Cravings'
         },
-        // EXACT recipes from explore page
         recipeList: [
             {
                 name: 'Fresh Fruit Salad',
@@ -161,6 +163,8 @@ const chefDatabase = {
         avatar: 'food-blog-img/kitchen-pfp(2).png',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Bengali Cuisine', 'Village Cooking', 'Traditional Desserts', 'Pitha', 'Fish Curries'],
+        // QUICK INFO - specific for Ruby
+        cuisine: 'Bengali, Bangladeshi',
         languages: 'Bengali, English',
         experience: '15+ years',
         awards: 'Best Home Cook 2023',
@@ -171,7 +175,6 @@ const chefDatabase = {
             pinterest: 'Bengali Recipes',
             facebook: 'Rubys Kitchen'
         },
-        // EXACT recipes from explore page
         recipeList: [
             {
                 name: 'Soft Rosogolla',
@@ -233,6 +236,8 @@ const chefDatabase = {
         avatar: 'food-blog-img/kitchen-pfp.jpeg',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Pasta Making', 'Pizza', 'Italian Desserts', 'Sauces', 'Regional Italian'],
+        // QUICK INFO - specific for Marco
+        cuisine: 'Italian, Mediterranean',
         languages: 'Italian, English',
         experience: '20 years',
         awards: 'Best Pasta 2024',
@@ -304,6 +309,8 @@ const chefDatabase = {
         avatar: 'food-blog-img/kitchen-pfp(1).png',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Sushi', 'Knife Skills', 'Japanese Soups', 'Tempura', 'Bento'],
+        // QUICK INFO - specific for Kenji
+        cuisine: 'Japanese, Sushi',
         languages: 'Japanese, English',
         experience: '22 years',
         awards: 'Sushi Master 2023',
@@ -375,6 +382,8 @@ const chefDatabase = {
         avatar: 'food-blog-img/kitchen-pfp.jpeg',
         cover: 'food-blog-img/kitchen-cover.jpg',
         specialties: ['Grilling', 'Tacos', 'Moles', 'Salsas', 'Tortillas'],
+        // QUICK INFO - specific for Ricardo
+        cuisine: 'Mexican, Latin',
         languages: 'Spanish, English',
         experience: '18 years',
         awards: 'Best Tacos 2024',
@@ -483,14 +492,20 @@ function updateChefProfile() {
         });
     }
     
-    // Quick info
+    // ===== FIXED: Quick info with cuisine =====
     const infoList = document.querySelector('.info-list');
     if (infoList) {
         const infoItems = infoList.querySelectorAll('li');
         if (infoItems.length >= 5) {
+            // Cuisine (first item) - NOW USING chef.cuisine
+            infoItems[0].innerHTML = `<i class="fas fa-globe"></i> <strong>Cuisine:</strong> ${chef.cuisine}`;
+            // Languages (second item)
             infoItems[1].innerHTML = `<i class="fas fa-language"></i> <strong>Languages:</strong> ${chef.languages}`;
+            // Experience (third item)
             infoItems[2].innerHTML = `<i class="fas fa-clock"></i> <strong>Experience:</strong> ${chef.experience}`;
+            // Awards (fourth item)
             infoItems[3].innerHTML = `<i class="fas fa-trophy"></i> <strong>Awards:</strong> ${chef.awards}`;
+            // Classes (fifth item)
             infoItems[4].innerHTML = `<i class="fas fa-users"></i> <strong>Classes:</strong> ${chef.students} students`;
         }
     }
