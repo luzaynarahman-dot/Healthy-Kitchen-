@@ -2090,19 +2090,47 @@ body {
     }
 }
 
-/* ===== FIX LINK UNDERLINE & CLICKABLE STYLES ===== */
 
-/* Remove underline from all links */
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
+/* ===== CLICKABLE STYLES - GREEN THEME, NO BLUE UNDERLINE ===== */
+
+/* Remove underline from all links - keep color same */
+a, a:hover, a:focus, a:active, 
+.nav-link, .view-kitchen-btn, .view-recipe, .view-all-link,
+.social-link, .footer-socials a, .category-card, .see-more-btn,
+.login-btn, .cta-btn, .tag, .review-recipe, .text-btn {
+    text-decoration: none !important;
 }
 
-/* Kitchen container clickable styles */
+/* Keep original link colors - don't change to blue */
+a, .nav-link, .view-kitchen-btn, .view-recipe, .view-all-link,
+.social-link, .category-card, .see-more-btn, .tag, .review-recipe {
+    color: inherit;
+}
+
+/* Hover effect for links - green or red as original */
+.view-kitchen-btn:hover, .view-recipe:hover, .view-all-link:hover {
+    color: #4CAF50 !important;
+    transform: translateX(5px);
+}
+
+/* Social links hover */
+.social-link:hover {
+    color: white !important;
+}
+
+/* Tags hover */
+.tag:hover {
+    color: white !important;
+    background: #4CAF50;
+}
+
+/* ===== CLICKABLE CONTAINERS - NO EXTRA CLICK ISSUE ===== */
+
+/* Kitchen container - clickable but doesn't interfere with recipe cards */
 .kitchen-section .container {
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
-    display: block;
+    position: relative;
 }
 
 .kitchen-section .container:hover {
@@ -2110,11 +2138,33 @@ a, a:hover, a:focus, a:active {
     box-shadow: 0 20px 40px rgba(76, 175, 80, 0.15);
 }
 
-/* Recipe card clickable */
-.card-item, .cuisine-cards .card, .preview-card {
+/* Recipe cards - prevent double click issue */
+.card-item {
     cursor: pointer;
     transition: all 0.3s ease;
-    text-decoration: none;
+    position: relative;
+    z-index: 2;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cuisine cards clickable */
+.cuisine-cards .card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cuisine-cards .card:hover {
+    transform: translateY(-8px);
+}
+
+/* Preview card clickable */
+.preview-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .preview-card:hover {
@@ -2122,78 +2172,25 @@ a, a:hover, a:focus, a:active {
     box-shadow: 0 10px 25px rgba(76, 175, 80, 0.15);
 }
 
-.card-item:hover, .cuisine-cards .card:hover {
-    transform: translateY(-5px);
+/* Prevent recipe card clicks from triggering container */
+.card-item, .preview-item, .recipe-card, .related-card {
+    position: relative;
+    z-index: 5;
 }
 
-/* Fix for any remaining link underlines */
-.nav-link, .login-btn, .cta-btn, .see-more-btn, .view-kitchen-btn, 
-.view-recipe, .view-all-link, .social-link, .footer-socials a {
-    text-decoration: none;
-}
-
-.nav-link:hover, .see-more-btn:hover, .view-kitchen-btn:hover, 
-.view-recipe:hover, .view-all-link:hover {
-    text-decoration: none;
-}
-
-/* Fix for search tags */
-.search-tags a {
-    text-decoration: none;
-}
-
-.search-tags a:hover {
-    text-decoration: underline;
-    text-decoration-color: #4CAF50;
-}
-
-/* Fix for footer social links */
-.footer-socials a {
-    text-decoration: none;
-    display: inline-block;
-}
-
-/* Fix for chef profile links */
-.chef-social-links .social-link {
-    text-decoration: none;
-}
-
-/* Fix for category cards */
-.category-card {
-    text-decoration: none;
-}
-
-/* Fix for any other links */
-[class*="btn"], [class*="link"], button {
-    text-decoration: none;
-}
-
-/* Ensure buttons don't have underline */
-button, .btn, .cta-btn, .login-btn, .kitchen-btn, .subscribe-btn, 
-.search-btn, .save-btn, .recipe-btn, .join-class-btn, .load-more-btn,
-.follow-btn, .message-btn, .share-btn {
-    text-decoration: none;
-}
-
-/* Fix for card titles and content */
-.card-item .card-title, .recipe-title, .profile-name, .kitchen-name {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Fix for profile links */
-.profile-link, .kitchen-link {
-    text-decoration: none;
-    display: block;
-}
-
-/* Ensure all interactive elements have proper cursor */
-.clickable, [onclick], .card-item, .cuisine-cards .card, 
-.preview-card, .kitchen-section .container {
+/* Ensure buttons don't get double click issues */
+button, .btn, .recipe-btn, .save-btn, .follow-btn, .message-btn {
     cursor: pointer;
+    position: relative;
+    z-index: 10;
 }
 
-/* Fix for any unwanted underline on hover */
-*:hover {
-    text-decoration: none !important;
+/* Fix for any unwanted overlay clicks */
+.kitchen-section .container * {
+    pointer-events: auto;
+}
+
+/* But recipe cards need to be clickable separately */
+.card-item, .preview-item, .recipe-card {
+    pointer-events: auto !important;
 }
