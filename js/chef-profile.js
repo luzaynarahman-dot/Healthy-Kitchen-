@@ -200,7 +200,7 @@ const chefDatabase = {
             },
             {
                 name: 'Misti Doi',
-                image: 'food-blog-img/misti-doi.jpeg',
+                image: 'food-blog-img/mishti-doi.jpeg',
                 badge: '🍮 Signature',
                 time: '6 hrs',
                 calories: '220 cal',
