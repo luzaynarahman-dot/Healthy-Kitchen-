@@ -2089,3 +2089,25 @@ body {
         max-width: 65% !important;
     }
 }
+
+/* ===== CLICKABLE CONTAINER STYLES ===== */
+.kitchen-section .container {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.kitchen-section .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.15);
+}
+
+/* ===== PREVIEW CARD CLICKABLE ===== */
+.preview-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.preview-card:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.15);
+}
