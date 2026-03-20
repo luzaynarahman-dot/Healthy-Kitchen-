@@ -2098,6 +2098,7 @@ a, a:hover, a:focus, a:active,
 .nav-link, .view-kitchen-btn, .view-recipe, .view-all-link,
 .social-link, .footer-socials a, .category-card, .see-more-btn,
 .login-btn, .cta-btn, .tag, .review-recipe, .text-btn {
+    color: inherit !important;
     text-decoration: none !important;
 }
 
