@@ -31,8 +31,8 @@ const chefDatabase = {
         },
         recipeList: [
             {
-                name: 'Authentic Döner Kebab',
-                image: 'food-blog-img/doner-kebab.png',
+                name: 'Mojito',
+                image: 'food-blog-img/mojito.jpeg',
                 badge: '🔥 Most Popular',
                 time: '45 min',
                 calories: '520 cal',
@@ -43,7 +43,7 @@ const chefDatabase = {
             },
             {
                 name: 'Turkish Lahmacun',
-                image: 'food-blog-img/lahmachun.png',
+                image: 'food-blog-img/lahmachun1.jpg',
                 badge: '🥇 Chef\'s Pick',
                 time: '1.5 hr',
                 calories: '380 cal',
@@ -54,7 +54,7 @@ const chefDatabase = {
             },
             {
                 name: 'Handmade Manti',
-                image: 'food-blog-img/manti.png',
+                image: 'food-blog-img/momos.jpeg',
                 badge: '🥟 Family Secret',
                 time: '2 hr',
                 calories: '450 cal',
@@ -64,8 +64,8 @@ const chefDatabase = {
                 difficultyClass: 'hard'
             },
             {
-                name: 'Pistachio Baklava',
-                image: 'food-blog-img/baklava.png',
+                name: 'Homemade Mayonese',
+                image: 'food-blog-img/mayonese.jpeg',
                 badge: '🍯 Signature',
                 time: '3 hr',
                 calories: '320 cal',
@@ -178,7 +178,7 @@ const chefDatabase = {
         recipeList: [
             {
                 name: 'Soft Rosogolla',
-                image: 'food-blog-img/rosogolla.png',
+                image: 'food-blog-img/rosogolla.jpeg',
                 badge: '🍬 Bengali Sweet',
                 time: '45 min',
                 calories: '280 cal',
@@ -189,7 +189,7 @@ const chefDatabase = {
             },
             {
                 name: 'Panta Ilish',
-                image: 'food-blog-img/panta-ilish.png',
+                image: 'food-blog-img/panta-ilish.jpeg',
                 badge: '🇧🇩 Traditional',
                 time: '30 min',
                 calories: '450 cal',
@@ -200,7 +200,7 @@ const chefDatabase = {
             },
             {
                 name: 'Misti Doi',
-                image: 'food-blog-img/misti-doi.png',
+                image: 'food-blog-img/misti-doi.jpeg',
                 badge: '🍮 Signature',
                 time: '6 hrs',
                 calories: '220 cal',
@@ -211,7 +211,7 @@ const chefDatabase = {
             },
             {
                 name: 'Shorshe Ilish',
-                image: 'food-blog-img/sorshe-ilish.png',
+                image: 'food-blog-img/sorshe-ilish.jpeg',
                 badge: '🔥 Most Popular',
                 time: '40 min',
                 calories: '520 cal',
@@ -273,7 +273,7 @@ const chefDatabase = {
             },
             {
                 name: 'Classic Lasagna',
-                image: 'food-blog-img/lasagna.png',
+                image: 'food-blog-img/lasagna.jpeg',
                 badge: '🥇 Family Favorite',
                 time: '2.5 hrs',
                 calories: '580 cal',
@@ -284,7 +284,7 @@ const chefDatabase = {
             },
             {
                 name: 'Tiramisu',
-                image: 'food-blog-img/tiramisu.png',
+                image: 'food-blog-img/tiramisu.jpeg',
                 badge: '☕ Perfecto',
                 time: '30 min',
                 calories: '320 cal',
@@ -335,7 +335,7 @@ const chefDatabase = {
             },
             {
                 name: 'Tonkotsu Ramen',
-                image: 'food-blog-img/ramen.png',
+                image: 'food-blog-img/ramen.jpeg',
                 badge: '🍜 Rich Broth',
                 time: '8 hrs',
                 calories: '580 cal',
@@ -346,7 +346,7 @@ const chefDatabase = {
             },
             {
                 name: 'Crispy Tempura',
-                image: 'food-blog-img/tempura.png',
+                image: 'food-blog-img/tempura.jpeg',
                 badge: '🥢 Light & Crispy',
                 time: '30 min',
                 calories: '420 cal',
@@ -357,7 +357,7 @@ const chefDatabase = {
             },
             {
                 name: 'Matcha Mochi',
-                image: 'food-blog-img/mochi.png',
+                image: 'food-blog-img/mochi.jpeg',
                 badge: '🍵 Sweet Treat',
                 time: '45 min',
                 calories: '180 cal',
@@ -397,7 +397,7 @@ const chefDatabase = {
         recipeList: [
             {
                 name: 'Street Tacos',
-                image: 'food-blog-img/tacos.png',
+                image: 'food-blog-img/tacos.jpeg',
                 badge: '🌮 Al Pastor',
                 time: '30 min',
                 calories: '350 cal',
@@ -408,7 +408,7 @@ const chefDatabase = {
             },
             {
                 name: 'Quesadillas',
-                image: 'food-blog-img/quesadilla.png',
+                image: 'food-blog-img/quesadilla.jpeg',
                 badge: '🧀 Cheesy',
                 time: '15 min',
                 calories: '420 cal',
@@ -419,7 +419,7 @@ const chefDatabase = {
             },
             {
                 name: 'Guacamole',
-                image: 'food-blog-img/guacamole.png',
+                image: 'food-blog-img/guacamole.jpeg',
                 badge: '🥑 Fresh',
                 time: '10 min',
                 calories: '180 cal',
@@ -430,7 +430,7 @@ const chefDatabase = {
             },
             {
                 name: 'Churros',
-                image: 'food-blog-img/churros.png',
+                image: 'food-blog-img/churros.jpeg',
                 badge: '🍩 Crispy',
                 time: '25 min',
                 calories: '290 cal',
