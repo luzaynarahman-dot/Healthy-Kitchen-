@@ -717,3 +717,30 @@ body {
         width: 100%;
     }
 }
+
+
+/* ===== KITCHEN PROFILE LINK ===== */
+.kitchen-profile-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.kitchen-profile-link:hover .kitchen-name {
+    color: #4caf50;
+}
+
+/* ===== PREVIEW ITEM AS LINK ===== */
+.preview-item {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.preview-item:hover img {
+    transform: scale(1.1);
+}
