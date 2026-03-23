@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<!-- ===== NAVBAR (same as home page) ===== -->
+<!-- ===== NAVBAR ===== -->
 <nav class="navbar">
     <div class="logo">Healthy<span>Kitchen</span></div>
     <div class="nav-links">
@@ -43,7 +43,6 @@
                 </div>
             </div>
             
-            <!-- Popular tags -->
             <div class="popular-tags">
                 <span class="tags-label">Popular:</span>
                 <a href="#" class="tag">Turkish Kitchen</a>
@@ -59,9 +58,8 @@
     <section class="kitchens-section">
         <div class="container">
             
-            <!-- Section header -->
             <div class="section-header">
-                <h2 class="section-title">Featured Kitchens <span class="count">(12 kitchens)</span></h2>
+                <h2 class="section-title">Featured Kitchens <span class="count">(6 kitchens)</span></h2>
                 <div class="filter-buttons">
                     <button class="filter-btn active">All</button>
                     <button class="filter-btn">Most Popular</button>
@@ -70,64 +68,50 @@
                 </div>
             </div>
             
-            <!-- Kitchens Grid -->
             <div class="kitchens-grid" id="kitchensGrid">
                 
                 <!-- Kitchen Card 1 - Emine Teyze -->
                 <div class="kitchen-card">
-                    <div class="kitchen-header">
-                        <div class="kitchen-profile">
-                            <img src="food-blog-img/kitchen-pfp(1).png" alt="Emine Teyze" class="profile-img">
-                            <div class="profile-info">
-                                <h3 class="kitchen-name">Emine Teyze</h3>
-                                <p class="kitchen-title">Sultan'ın Sofrası</p>
-                                <div class="kitchen-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span>
-                                    <span><i class="fas fa-utensils"></i> 24 recipes</span>
+                    <a href="chef-profile.html?chef=emine" class="kitchen-profile-link">
+                        <div class="kitchen-header">
+                            <div class="kitchen-profile">
+                                <img src="food-blog-img/kitchen-pfp(1).png" alt="Emine Teyze" class="profile-img">
+                                <div class="profile-info">
+                                    <h3 class="kitchen-name">Emine Teyze</h3>
+                                    <p class="kitchen-title">Sultan'ın Sofrası</p>
+                                    <div class="kitchen-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Istanbul, Turkey</span>
+                                        <span><i class="fas fa-utensils"></i> 24 recipes</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="follow-btn" onclick="event.stopPropagation();">+ Follow</button>
                         </div>
-                        <button class="follow-btn">+ Follow</button>
-                    </div>
+                    </a>
                     
-                    <!-- Recipe previews -->
                     <div class="recipe-previews">
-                        <div class="preview-item">
+                        <a href="recipe.html?id=mojito" class="preview-item">
                             <img src="food-blog-img/mojito.jpeg" alt="Mojito">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Mojito</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Mojito</span></div>
+                        </a>
+                        <a href="recipe.html?id=mayonese" class="preview-item">
                             <img src="food-blog-img/mayonese.jpeg" alt="Mayonnaise">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Homemade Mayo</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Homemade Mayo</span></div>
+                        </a>
+                        <a href="recipe.html?id=manti" class="preview-item">
                             <img src="food-blog-img/momos.jpeg" alt="Momos">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Steamed Momos</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Steamed Momos</span></div>
+                        </a>
+                        <a href="recipe.html?id=lahmacun" class="preview-item">
                             <img src="food-blog-img/lahmachun1.jpg" alt="Lahmacun">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Lahmacun</span>
-                            </div>
-                        </div>
-                        <div class="preview-item more">
-                            <span class="more-count">+4</span>
-                        </div>
+                            <div class="preview-overlay"><span class="recipe-name">Lahmacun</span></div>
+                        </a>
+                        <div class="preview-item more"><span class="more-count">+4</span></div>
                     </div>
                     
                     <div class="kitchen-footer">
                         <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span class="rating-text">4.8 (128 reviews)</span>
                         </div>
                         <a href="chef-profile.html?chef=emine" class="view-kitchen-btn">View Kitchen →</a>
@@ -136,58 +120,46 @@
                 
                 <!-- Kitchen Card 2 - Cool Dude -->
                 <div class="kitchen-card">
-                    <div class="kitchen-header">
-                        <div class="kitchen-profile">
-                            <img src="food-blog-img/kitchen-pfp.jpeg" alt="Cool Dude" class="profile-img">
-                            <div class="profile-info">
-                                <h3 class="kitchen-name">Cool Dude</h3>
-                                <p class="kitchen-title">Lazy Cravings</p>
-                                <div class="kitchen-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> New York, USA</span>
-                                    <span><i class="fas fa-utensils"></i> 18 recipes</span>
+                    <a href="chef-profile.html?chef=cool-dude" class="kitchen-profile-link">
+                        <div class="kitchen-header">
+                            <div class="kitchen-profile">
+                                <img src="food-blog-img/kitchen-pfp.jpeg" alt="Cool Dude" class="profile-img">
+                                <div class="profile-info">
+                                    <h3 class="kitchen-name">Cool Dude</h3>
+                                    <p class="kitchen-title">Lazy Cravings</p>
+                                    <div class="kitchen-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> New York, USA</span>
+                                        <span><i class="fas fa-utensils"></i> 18 recipes</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="follow-btn" onclick="event.stopPropagation();">+ Follow</button>
                         </div>
-                        <button class="follow-btn">+ Follow</button>
-                    </div>
+                    </a>
                     
                     <div class="recipe-previews">
-                        <div class="preview-item">
+                        <a href="recipe.html?id=fruit-salad" class="preview-item">
                             <img src="food-blog-img/fruit-salad.jpeg" alt="Fruit Salad">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Fruit Salad</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Fruit Salad</span></div>
+                        </a>
+                        <a href="recipe.html?id=avocado-toast" class="preview-item">
                             <img src="food-blog-img/avocado-toast.jpeg" alt="Avocado Toast">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Avocado Toast</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Avocado Toast</span></div>
+                        </a>
+                        <a href="recipe.html?id=italian-pasta" class="preview-item">
                             <img src="food-blog-img/pasta.jpeg" alt="Pasta">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Italian Pasta</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Italian Pasta</span></div>
+                        </a>
+                        <a href="recipe.html?id=lava-cake" class="preview-item">
                             <img src="food-blog-img/lava-cake.jpeg" alt="Lava Cake">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Lava Cake</span>
-                            </div>
-                        </div>
-                        <div class="preview-item more">
-                            <span class="more-count">+2</span>
-                        </div>
+                            <div class="preview-overlay"><span class="recipe-name">Lava Cake</span></div>
+                        </a>
+                        <div class="preview-item more"><span class="more-count">+2</span></div>
                     </div>
                     
                     <div class="kitchen-footer">
                         <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span class="rating-text">5.0 (89 reviews)</span>
                         </div>
                         <a href="chef-profile.html?chef=cool-dude" class="view-kitchen-btn">View Kitchen →</a>
@@ -196,58 +168,46 @@
                 
                 <!-- Kitchen Card 3 - Ruby Rahman -->
                 <div class="kitchen-card">
-                    <div class="kitchen-header">
-                        <div class="kitchen-profile">
-                            <img src="food-blog-img/kitchen-pfp(2).png" alt="Ruby Rahman" class="profile-img">
-                            <div class="profile-info">
-                                <h3 class="kitchen-name">Ruby Rahman</h3>
-                                <p class="kitchen-title">Ghoroa Rannabanna</p>
-                                <div class="kitchen-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
-                                    <span><i class="fas fa-utensils"></i> 32 recipes</span>
+                    <a href="chef-profile.html?chef=ruby" class="kitchen-profile-link">
+                        <div class="kitchen-header">
+                            <div class="kitchen-profile">
+                                <img src="food-blog-img/kitchen-pfp(2).png" alt="Ruby Rahman" class="profile-img">
+                                <div class="profile-info">
+                                    <h3 class="kitchen-name">Ruby Rahman</h3>
+                                    <p class="kitchen-title">Ghoroa Rannabanna</p>
+                                    <div class="kitchen-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                                        <span><i class="fas fa-utensils"></i> 32 recipes</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="follow-btn" onclick="event.stopPropagation();">+ Follow</button>
                         </div>
-                        <button class="follow-btn">+ Follow</button>
-                    </div>
+                    </a>
                     
                     <div class="recipe-previews">
-                        <div class="preview-item">
-                            <img src="food-blog-img/rosogolla.jpeg" alt="Rosogolla">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Rosogolla</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/panta-ilish.jpeg" alt="Panta ilish">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Panta-ilish</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/mishti-doi.jpeg" alt="Mishti doi">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Mishti Doi</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/sorshe-ilish.jpeg" alt="shorshe-ilish">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Sorshe ilish</span>
-                            </div>
-                        </div>
-                        <div class="preview-item more">
-                            <span class="more-count">+6</span>
-                        </div>
+                        <a href="recipe.html?id=rosogolla" class="preview-item">
+                            <img src="food-blog-img/rosogolla.png" alt="Rosogolla">
+                            <div class="preview-overlay"><span class="recipe-name">Rosogolla</span></div>
+                        </a>
+                        <a href="recipe.html?id=panta-ilish" class="preview-item">
+                            <img src="food-blog-img/panta-ilish.png" alt="Panta Ilish">
+                            <div class="preview-overlay"><span class="recipe-name">Panta-ilish</span></div>
+                        </a>
+                        <a href="recipe.html?id=mishti-doi" class="preview-item">
+                            <img src="food-blog-img/misti-doi.png" alt="Misti Doi">
+                            <div class="preview-overlay"><span class="recipe-name">Misti Doi</span></div>
+                        </a>
+                        <a href="recipe.html?id=sorshe-ilish" class="preview-item">
+                            <img src="food-blog-img/sorshe-ilish.png" alt="Shorshe Ilish">
+                            <div class="preview-overlay"><span class="recipe-name">Sorshe ilish</span></div>
+                        </a>
+                        <div class="preview-item more"><span class="more-count">+6</span></div>
                     </div>
                     
                     <div class="kitchen-footer">
                         <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span class="rating-text">5.0 (256 reviews)</span>
                         </div>
                         <a href="chef-profile.html?chef=ruby" class="view-kitchen-btn">View Kitchen →</a>
@@ -256,58 +216,46 @@
                 
                 <!-- Kitchen Card 4 - Marco Esposito -->
                 <div class="kitchen-card">
-                    <div class="kitchen-header">
-                        <div class="kitchen-profile">
-                            <img src="food-blog-img/kitchen-pfp.jpeg" alt="Marco" class="profile-img">
-                            <div class="profile-info">
-                                <h3 class="kitchen-name">Marco Esposito</h3>
-                                <p class="kitchen-title">Italian Kitchen</p>
-                                <div class="kitchen-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> Rome, Italy</span>
-                                    <span><i class="fas fa-utensils"></i> 27 recipes</span>
+                    <a href="chef-profile.html?chef=marco" class="kitchen-profile-link">
+                        <div class="kitchen-header">
+                            <div class="kitchen-profile">
+                                <img src="food-blog-img/kitchen-pfp.jpeg" alt="Marco" class="profile-img">
+                                <div class="profile-info">
+                                    <h3 class="kitchen-name">Marco Esposito</h3>
+                                    <p class="kitchen-title">Italian Kitchen</p>
+                                    <div class="kitchen-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Rome, Italy</span>
+                                        <span><i class="fas fa-utensils"></i> 27 recipes</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="follow-btn" onclick="event.stopPropagation();">+ Follow</button>
                         </div>
-                        <button class="follow-btn">+ Follow</button>
-                    </div>
+                    </a>
                     
                     <div class="recipe-previews">
-                        <div class="preview-item">
+                        <a href="recipe.html?id=pasta" class="preview-item">
                             <img src="food-blog-img/pasta.png" alt="Pasta">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Pasta</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
+                            <div class="preview-overlay"><span class="recipe-name">Pasta</span></div>
+                        </a>
+                        <a href="recipe.html?id=pizza" class="preview-item">
                             <img src="food-blog-img/pizza.png" alt="Pizza">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Pizza</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/lasagna.jpeg" alt="Lasagna">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Lasagna</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/tiramisu.jpeg" alt="Tiramisu">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Tiramisu</span>
-                            </div>
-                        </div>
-                        <div class="preview-item more">
-                            <span class="more-count">+3</span>
-                        </div>
+                            <div class="preview-overlay"><span class="recipe-name">Pizza</span></div>
+                        </a>
+                        <a href="recipe.html?id=lasagna" class="preview-item">
+                            <img src="food-blog-img/lasagna.png" alt="Lasagna">
+                            <div class="preview-overlay"><span class="recipe-name">Lasagna</span></div>
+                        </a>
+                        <a href="recipe.html?id=tiramisu" class="preview-item">
+                            <img src="food-blog-img/tiramisu.png" alt="Tiramisu">
+                            <div class="preview-overlay"><span class="recipe-name">Tiramisu</span></div>
+                        </a>
+                        <div class="preview-item more"><span class="more-count">+3</span></div>
                     </div>
                     
                     <div class="kitchen-footer">
                         <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span class="rating-text">4.9 (167 reviews)</span>
                         </div>
                         <a href="chef-profile.html?chef=marco" class="view-kitchen-btn">View Kitchen →</a>
@@ -316,58 +264,46 @@
                 
                 <!-- Kitchen Card 5 - Kenji Tanaka -->
                 <div class="kitchen-card">
-                    <div class="kitchen-header">
-                        <div class="kitchen-profile">
-                            <img src="food-blog-img/kitchen-pfp(3).png" alt="Kenji" class="profile-img">
-                            <div class="profile-info">
-                                <h3 class="kitchen-name">Kenji Tanaka</h3>
-                                <p class="kitchen-title">Sakura Palace</p>
-                                <div class="kitchen-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</span>
-                                    <span><i class="fas fa-utensils"></i> 21 recipes</span>
+                    <a href="chef-profile.html?chef=kenji" class="kitchen-profile-link">
+                        <div class="kitchen-header">
+                            <div class="kitchen-profile">
+                                <img src="food-blog-img/kitchen-pfp(1).png" alt="Kenji" class="profile-img">
+                                <div class="profile-info">
+                                    <h3 class="kitchen-name">Kenji Tanaka</h3>
+                                    <p class="kitchen-title">Sakura Palace</p>
+                                    <div class="kitchen-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</span>
+                                        <span><i class="fas fa-utensils"></i> 21 recipes</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="follow-btn" onclick="event.stopPropagation();">+ Follow</button>
                         </div>
-                        <button class="follow-btn">+ Follow</button>
-                    </div>
+                    </a>
                     
                     <div class="recipe-previews">
-                        <div class="preview-item">
+                        <a href="recipe.html?id=sushi" class="preview-item">
                             <img src="food-blog-img/sushi.png" alt="Sushi">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Sushi</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/ramen.jpeg" alt="Ramen">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Ramen</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/tempura.jpeg" alt="Tempura">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Tempura</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/mochi.jpeg" alt="Mochi">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Mochi</span>
-                            </div>
-                        </div>
-                        <div class="preview-item more">
-                            <span class="more-count">+2</span>
-                        </div>
+                            <div class="preview-overlay"><span class="recipe-name">Sushi</span></div>
+                        </a>
+                        <a href="recipe.html?id=ramen" class="preview-item">
+                            <img src="food-blog-img/ramen.png" alt="Ramen">
+                            <div class="preview-overlay"><span class="recipe-name">Ramen</span></div>
+                        </a>
+                        <a href="recipe.html?id=tempura" class="preview-item">
+                            <img src="food-blog-img/tempura.png" alt="Tempura">
+                            <div class="preview-overlay"><span class="recipe-name">Tempura</span></div>
+                        </a>
+                        <a href="recipe.html?id=mochi" class="preview-item">
+                            <img src="food-blog-img/mochi.png" alt="Mochi">
+                            <div class="preview-overlay"><span class="recipe-name">Mochi</span></div>
+                        </a>
+                        <div class="preview-item more"><span class="more-count">+2</span></div>
                     </div>
                     
                     <div class="kitchen-footer">
                         <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span class="rating-text">5.0 (142 reviews)</span>
                         </div>
                         <a href="chef-profile.html?chef=kenji" class="view-kitchen-btn">View Kitchen →</a>
@@ -376,72 +312,59 @@
                 
                 <!-- Kitchen Card 6 - Ricardo Gomez -->
                 <div class="kitchen-card">
-                    <div class="kitchen-header">
-                        <div class="kitchen-profile">
-                            <img src="food-blog-img/kitchen-pfp.jpeg" alt="Ricardo" class="profile-img">
-                            <div class="profile-info">
-                                <h3 class="kitchen-name">Ricardo Gomez</h3>
-                                <p class="kitchen-title">La Parrilla Ahumada</p>
-                                <div class="kitchen-meta">
-                                    <span><i class="fas fa-map-marker-alt"></i> Mexico City</span>
-                                    <span><i class="fas fa-utensils"></i> 15 recipes</span>
+                    <a href="chef-profile.html?chef=ricardo" class="kitchen-profile-link">
+                        <div class="kitchen-header">
+                            <div class="kitchen-profile">
+                                <img src="food-blog-img/kitchen-pfp.jpeg" alt="Ricardo" class="profile-img">
+                                <div class="profile-info">
+                                    <h3 class="kitchen-name">Ricardo Gomez</h3>
+                                    <p class="kitchen-title">La Parrilla Ahumada</p>
+                                    <div class="kitchen-meta">
+                                        <span><i class="fas fa-map-marker-alt"></i> Mexico City</span>
+                                        <span><i class="fas fa-utensils"></i> 15 recipes</span>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="follow-btn" onclick="event.stopPropagation();">+ Follow</button>
                         </div>
-                        <button class="follow-btn">+ Follow</button>
-                    </div>
+                    </a>
                     
                     <div class="recipe-previews">
-                        <div class="preview-item">
-                            <img src="food-blog-img/tacos.jpeg" alt="Tacos">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Tacos</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/quesadilla.jpeg" alt="Quesadilla">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Quesadilla</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/guacamole.jpeg" alt="Guacamole">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Guacamole</span>
-                            </div>
-                        </div>
-                        <div class="preview-item">
-                            <img src="food-blog-img/churros.jpeg" alt="Churros">
-                            <div class="preview-overlay">
-                                <span class="recipe-name">Churros</span>
-                            </div>
-                        </div>
-                        <div class="preview-item more">
-                            <span class="more-count">+1</span>
-                        </div>
+                        <a href="recipe.html?id=tacos" class="preview-item">
+                            <img src="food-blog-img/tacos.png" alt="Tacos">
+                            <div class="preview-overlay"><span class="recipe-name">Tacos</span></div>
+                        </a>
+                        <a href="recipe.html?id=quesadilla" class="preview-item">
+                            <img src="food-blog-img/quesadilla.png" alt="Quesadilla">
+                            <div class="preview-overlay"><span class="recipe-name">Quesadilla</span></div>
+                        </a>
+                        <a href="recipe.html?id=guacamole" class="preview-item">
+                            <img src="food-blog-img/guacamole.png" alt="Guacamole">
+                            <div class="preview-overlay"><span class="recipe-name">Guacamole</span></div>
+                        </a>
+                        <a href="recipe.html?id=churros" class="preview-item">
+                            <img src="food-blog-img/churros.png" alt="Churros">
+                            <div class="preview-overlay"><span class="recipe-name">Churros</span></div>
+                        </a>
+                        <div class="preview-item more"><span class="more-count">+1</span></div>
                     </div>
                     
                     <div class="kitchen-footer">
                         <div class="ratings">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                             <span class="rating-text">4.8 (76 reviews)</span>
                         </div>
                         <a href="chef-profile.html?chef=ricardo" class="view-kitchen-btn">View Kitchen →</a>
                     </div>
                 </div>
                 
-            </div> <!-- End kitchens-grid -->
+            </div>
             
-            <!-- Load More Button -->
             <div class="load-more">
                 <button class="load-more-btn">Load More Kitchens</button>
             </div>
             
-        </div> <!-- End container -->
+        </div>
     </section>
 
 </main>
@@ -451,24 +374,11 @@
     <button class="fab-main" id="fabMain">
         <i class="fas fa-plus"></i>
     </button>
-    
     <div class="fab-menu" id="fabMenu">
-        <a href="#" class="fab-item" style="--i:1">
-            <i class="fas fa-utensils"></i>
-            <span>Add Kitchen</span>
-        </a>
-        <a href="#" class="fab-item" style="--i:2">
-            <i class="fas fa-receipt"></i>
-            <span>Add Recipe</span>
-        </a>
-        <a href="#" class="fab-item" style="--i:3">
-            <i class="fas fa-users"></i>
-            <span>Invite Chef</span>
-        </a>
-        <a href="#" class="fab-item" style="--i:4">
-            <i class="fas fa-question-circle"></i>
-            <span>Help</span>
-        </a>
+        <a href="#" class="fab-item" style="--i:1"><i class="fas fa-utensils"></i><span>Add Kitchen</span></a>
+        <a href="#" class="fab-item" style="--i:2"><i class="fas fa-receipt"></i><span>Add Recipe</span></a>
+        <a href="#" class="fab-item" style="--i:3"><i class="fas fa-users"></i><span>Invite Chef</span></a>
+        <a href="#" class="fab-item" style="--i:4"><i class="fas fa-question-circle"></i><span>Help</span></a>
     </div>
 </div>
 
