@@ -126,7 +126,7 @@ const recipes = {
     'rosogolla': {
         title: 'Soft Rosogolla', category: 'Dessert', cuisine: 'Bengali', prepTime: '45 mins', calories: '280 cal',
         rating: '5.0 (312)', difficulty: 'Medium', chef: 'Ruby Rahman', chefAvatar: 'food-blog-img/kitchen-pfp(2).png',
-        image: 'food-blog-img/rosogolla.png', badge: '🍬 Bengali Sweet', shortDesc: 'Bengali cottage cheese balls',
+        image: 'food-blog-img/rosogolla.jpeg', badge: '🍬 Bengali Sweet', shortDesc: 'Bengali cottage cheese balls',
         description: 'Soft, spongy cottage cheese balls in light sugar syrup.',
         nutrition: { calories: '280', protein: '8g', carbs: '42g', fat: '8g', fiber: '0g', sugar: '35g' },
         time: { prep: '20 mins', cook: '25 mins', total: '45 mins' },
@@ -142,7 +142,7 @@ const recipes = {
     'panta-ilish': {
         title: 'Panta Ilish', category: 'Main Dish', cuisine: 'Bengali', prepTime: '30 mins', calories: '450 cal',
         rating: '4.9 (256)', difficulty: 'Medium', chef: 'Ruby Rahman', chefAvatar: 'food-blog-img/kitchen-pfp(2).png',
-        image: 'food-blog-img/panta-ilish.png', badge: '🇧🇩 Traditional', shortDesc: 'Fermented rice with hilsa',
+        image: 'food-blog-img/panta-ilish.jpeg', badge: '🇧🇩 Traditional', shortDesc: 'Fermented rice with hilsa',
         description: 'Fermented rice with fried hilsa, onions, and green chilies.',
         nutrition: { calories: '450', protein: '25g', carbs: '48g', fat: '18g', fiber: '2g', sugar: '3g' },
         time: { prep: '10 mins', cook: '20 mins', total: '30 mins' },
@@ -155,7 +155,7 @@ const recipes = {
     'mishti-doi': {
         title: 'Misti Doi', category: 'Dessert', cuisine: 'Bengali', prepTime: '6 hrs', calories: '220 cal',
         rating: '5.0 (189)', difficulty: 'Hard', chef: 'Ruby Rahman', chefAvatar: 'food-blog-img/kitchen-pfp(2).png',
-        image: 'food-blog-img/misti-doi.png', badge: '🍮 Signature', shortDesc: 'Sweet caramelized yogurt',
+        image: 'food-blog-img/mishti-doi.jpeg', badge: '🍮 Signature', shortDesc: 'Sweet caramelized yogurt',
         description: 'Caramelized yogurt dessert, creamy and perfectly sweet.',
         nutrition: { calories: '220', protein: '6g', carbs: '28g', fat: '9g', fiber: '0g', sugar: '25g' },
         time: { prep: '15 mins', cook: '15 mins', total: '6 hrs' },
@@ -168,7 +168,7 @@ const recipes = {
     'sorshe-ilish': {
         title: 'Shorshe Ilish', category: 'Main Dish', cuisine: 'Bengali', prepTime: '40 mins', calories: '520 cal',
         rating: '4.9 (278)', difficulty: 'Medium', chef: 'Ruby Rahman', chefAvatar: 'food-blog-img/kitchen-pfp(2).png',
-        image: 'food-blog-img/sorshe-ilish.png', badge: '🔥 Most Popular', shortDesc: 'Hilsa in mustard sauce',
+        image: 'food-blog-img/sorshe-ilish.jpeg', badge: '🔥 Most Popular', shortDesc: 'Hilsa in mustard sauce',
         description: 'Hilsa fish cooked in mustard gravy, a Bengali classic.',
         nutrition: { calories: '520', protein: '32g', carbs: '8g', fat: '38g', fiber: '2g', sugar: '2g' },
         time: { prep: '15 mins', cook: '25 mins', total: '40 mins' },
@@ -183,7 +183,7 @@ const recipes = {
     'lasagna': {
         title: 'Classic Lasagna', category: 'Main Dish', cuisine: 'Italian', prepTime: '2.5 hr', calories: '580 cal',
         rating: '4.9 (198)', difficulty: 'Hard', chef: 'Marco Esposito', chefAvatar: 'food-blog-img/kitchen-pfp.jpeg',
-        image: 'food-blog-img/lasagna.png', badge: '🥇 Family Favorite', shortDesc: 'Traditional Italian lasagna',
+        image: 'food-blog-img/lasagna.jpeg', badge: '🥇 Family Favorite', shortDesc: 'Traditional Italian lasagna',
         description: 'Layers of pasta, meat sauce, béchamel, and Parmesan.',
         nutrition: { calories: '580', protein: '32g', carbs: '45g', fat: '28g', fiber: '4g', sugar: '8g' },
         time: { prep: '30 mins', cook: '2 hr', total: '2.5 hr' },
@@ -200,7 +200,7 @@ const recipes = {
     'tiramisu': {
         title: 'Tiramisu', category: 'Dessert', cuisine: 'Italian', prepTime: '30 mins', calories: '320 cal',
         rating: '5.0 (356)', difficulty: 'Medium', chef: 'Marco Esposito', chefAvatar: 'food-blog-img/kitchen-pfp.jpeg',
-        image: 'food-blog-img/tiramisu.png', badge: '☕ Perfecto', shortDesc: 'Coffee-flavored Italian dessert',
+        image: 'food-blog-img/tiramisu.jpeg', badge: '☕ Perfecto', shortDesc: 'Coffee-flavored Italian dessert',
         description: 'Coffee-soaked ladyfingers with mascarpone cream.',
         nutrition: { calories: '320', protein: '6g', carbs: '28g', fat: '18g', fiber: '0g', sugar: '20g' },
         time: { prep: '30 mins', cook: '0 mins', total: '4 hrs' },
