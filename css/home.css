@@ -2091,60 +2091,41 @@ body {
 }
 
 
-/* ===== CLICKABLE STYLES - GREEN THEME, NO BLUE UNDERLINE ===== */
-
-/* Remove underline from all links - keep color same */
-a, a:hover, a:focus, a:active, 
-.nav-link, .view-kitchen-btn, .view-recipe, .view-all-link,
-.social-link, .footer-socials a, .category-card, .see-more-btn,
-.login-btn, .cta-btn, .tag, .review-recipe, .text-btn {
-    color: inherit !important;
-    text-decoration: none !important;
-}
-
-/* Keep original link colors - don't change to blue */
-a, .nav-link, .view-kitchen-btn, .view-recipe, .view-all-link,
-.social-link, .category-card, .see-more-btn, .tag, .review-recipe {
+/* ===== KITCHEN LINK STYLES ===== */
+.kitchen-link {
+    text-decoration: none;
+    display: block;
     color: inherit;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
 }
 
-/* Hover effect for links - green or red as original */
-.view-kitchen-btn:hover, .view-recipe:hover, .view-all-link:hover {
-    color: #4CAF50 !important;
+.kitchen-link:hover {
     transform: translateX(5px);
 }
 
-/* Social links hover */
-.social-link:hover {
-    color: white !important;
+.kitchen-link:hover .profile-name {
+    color: #4CAF50;
 }
 
-/* Tags hover */
-.tag:hover {
-    color: white !important;
-    background: #4CAF50;
+/* ===== RECIPE LINK STYLES ===== */
+.recipe-link {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    height: 100%;
 }
 
-/* ===== CLICKABLE CONTAINERS - NO EXTRA CLICK ISSUE ===== */
-
-/* Kitchen container - clickable but doesn't interfere with recipe cards */
-.kitchen-section .container {
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
+.recipe-link:hover .card-title {
+    color: #4CAF50;
 }
 
-.kitchen-section .container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.15);
-}
-
-/* Recipe cards - prevent double click issue */
 .card-item {
-    cursor: pointer;
+    background: #fafafa;
+    border-radius: 15px;
+    overflow: hidden;
     transition: all 0.3s ease;
-    position: relative;
-    z-index: 2;
+    border: 1px solid #f0f0f0;
 }
 
 .card-item:hover {
@@ -2152,46 +2133,25 @@ a, .nav-link, .view-kitchen-btn, .view-recipe, .view-all-link,
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Cuisine cards clickable */
-.cuisine-cards .card {
-    cursor: pointer;
-    transition: all 0.3s ease;
+.card-item img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
 }
 
-.cuisine-cards .card:hover {
-    transform: translateY(-8px);
+.card-item .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 12px 5px;
+    margin: 0;
+    color: #222;
 }
 
-/* Preview card clickable */
-.preview-card {
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.preview-card:hover {
-    transform: translateX(-5px);
-    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.15);
-}
-
-/* Prevent recipe card clicks from triggering container */
-.card-item, .preview-item, .recipe-card, .related-card {
-    position: relative;
-    z-index: 5;
-}
-
-/* Ensure buttons don't get double click issues */
-button, .btn, .recipe-btn, .save-btn, .follow-btn, .message-btn {
-    cursor: pointer;
-    position: relative;
-    z-index: 10;
-}
-
-/* Fix for any unwanted overlay clicks */
-.kitchen-section .container * {
-    pointer-events: auto;
-}
-
-/* But recipe cards need to be clickable separately */
-.card-item, .preview-item, .recipe-card {
-    pointer-events: auto !important;
+.card-item p {
+    font-size: 0.8rem;
+    color: #666;
+    padding: 0 12px 15px;
+    margin: 0;
+    line-height: 1.4;
 }
