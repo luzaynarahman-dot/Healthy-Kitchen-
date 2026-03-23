@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe | Authentic Döner Kebab - Healthy Kitchen</title>
+    <title>Recipe | Healthy Kitchen</title>
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/recipe.css">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -27,440 +27,169 @@
     </div>
 </nav>
 
-<!-- ===== RECIPE HEADER ===== -->
-<section class="recipe-header">
+<!-- ===== HERO SECTION ===== -->
+<section class="recipe-hero">
+    <div class="hero-bg"></div>
     <div class="container">
-        <div class="recipe-header-content">
-            <div class="recipe-header-left">
-                <div class="recipe-category-badge">
-                    <span class="category">Main Dish</span>
-                    <span class="cuisine">Turkish</span>
-                </div>
-                <h1 class="recipe-title-main" id="recipeTitle">Authentic Döner Kebab</h1>
-                <div class="recipe-meta-top">
-                    <div class="meta-item">
-                        <i class="far fa-clock"></i>
-                        <span id="prepTime">45 mins</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-fire"></i>
-                        <span id="calories">520 cal</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-star"></i>
-                        <span id="rating">4.9 (234 reviews)</span>
-                    </div>
-                    <div class="meta-item">
-                        <i class="fas fa-signal"></i>
-                        <span id="difficulty">Medium</span>
-                    </div>
-                </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-category" id="recipeCategory">Main Dish</span>
+                <span class="badge-cuisine" id="recipeCuisine">Turkish</span>
+            </div>
+            <h1 class="hero-title" id="recipeTitle">Authentic Döner Kebab</h1>
+            <p class="hero-desc" id="recipeShortDesc">Classic Turkish street food</p>
+            
+            <div class="hero-stats">
+                <div class="stat"><i class="far fa-clock"></i><span id="prepTime">45 mins</span></div>
+                <div class="stat"><i class="fas fa-fire"></i><span id="calories">520 cal</span></div>
+                <div class="stat"><i class="fas fa-star"></i><span id="rating">4.9 (234)</span></div>
+                <div class="stat"><i class="fas fa-chart-line"></i><span id="difficulty">Medium</span></div>
             </div>
             
-            <div class="recipe-header-right">
-                <div class="chef-info-mini">
-                    <img src="food-blog-img/kitchen-pfp(1).png" alt="Chef" class="chef-mini-avatar" id="chefAvatar">
-                    <div class="chef-mini-details">
-                        <span class="chef-mini-label">Recipe by</span>
-                        <h4 class="chef-mini-name" id="chefName">Emine Teyze</h4>
-                    </div>
-                </div>
-                <div class="recipe-actions">
-                    <button class="save-recipe-btn" id="saveRecipeBtn">
-                        <i class="far fa-bookmark"></i>
-                        <span>Save</span>
-                    </button>
-                    <button class="share-recipe-btn" id="shareRecipeBtn">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                </div>
+            <div class="hero-chef">
+                <img src="food-blog-img/kitchen-pfp(1).png" alt="Chef" id="chefAvatar">
+                <div class="chef-info"><span>Recipe by</span><h4 id="chefName">Emine Teyze</h4></div>
+                <button class="save-btn" id="saveBtn"><i class="far fa-bookmark"></i><span>Save Recipe</span></button>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== RECIPE IMAGE ===== -->
+<!-- ===== MAIN IMAGE ===== -->
 <section class="recipe-image-section">
     <div class="container">
-        <div class="recipe-image-wrapper">
-            <img src="food-blog-img/doner-kebab.png" alt="Döner Kebab" class="recipe-main-image" id="recipeImage">
-            <div class="recipe-badge-featured">🔥 Most Popular</div>
+        <div class="image-wrapper">
+            <img src="food-blog-img/doner-kebab.png" alt="Recipe" id="recipeImage" class="recipe-main-img">
+            <div class="image-badge" id="recipeBadge">🔥 Most Popular</div>
         </div>
     </div>
 </section>
 
-<!-- ===== RECIPE CONTENT ===== -->
-<section class="recipe-content-section">
+<!-- ===== CONTENT SECTION ===== -->
+<section class="recipe-content">
     <div class="container">
-        <div class="recipe-content-grid">
+        <div class="content-grid">
             
             <!-- LEFT SIDEBAR -->
-            <div class="recipe-sidebar">
-                
-                <!-- Nutrition Card -->
-                <div class="sidebar-card nutrition-card">
+            <aside class="recipe-sidebar">
+                <div class="card nutrition-card">
                     <h3><i class="fas fa-chart-pie"></i> Nutrition Facts</h3>
-                    <div class="nutrition-grid">
-                        <div class="nutrition-item">
-                            <span class="nutrition-label">Calories</span>
-                            <span class="nutrition-value" id="nutritionCalories">520</span>
-                        </div>
-                        <div class="nutrition-item">
-                            <span class="nutrition-label">Protein</span>
-                            <span class="nutrition-value" id="nutritionProtein">32g</span>
-                        </div>
-                        <div class="nutrition-item">
-                            <span class="nutrition-label">Carbs</span>
-                            <span class="nutrition-value" id="nutritionCarbs">45g</span>
-                        </div>
-                        <div class="nutrition-item">
-                            <span class="nutrition-label">Fat</span>
-                            <span class="nutrition-value" id="nutritionFat">22g</span>
-                        </div>
-                        <div class="nutrition-item">
-                            <span class="nutrition-label">Fiber</span>
-                            <span class="nutrition-value" id="nutritionFiber">6g</span>
-                        </div>
-                        <div class="nutrition-item">
-                            <span class="nutrition-label">Sugar</span>
-                            <span class="nutrition-value" id="nutritionSugar">8g</span>
-                        </div>
+                    <div class="nutrition-grid" id="nutritionGrid">
+                        <div class="nutrient"><span>Calories</span><strong id="nutCalories">520</strong></div>
+                        <div class="nutrient"><span>Protein</span><strong id="nutProtein">32g</strong></div>
+                        <div class="nutrient"><span>Carbs</span><strong id="nutCarbs">45g</strong></div>
+                        <div class="nutrient"><span>Fat</span><strong id="nutFat">22g</strong></div>
+                        <div class="nutrient"><span>Fiber</span><strong id="nutFiber">6g</strong></div>
+                        <div class="nutrient"><span>Sugar</span><strong id="nutSugar">8g</strong></div>
                     </div>
-                    <p class="nutrition-note">Per serving (1 portion)</p>
+                    <p class="card-note">Per serving</p>
                 </div>
                 
-                <!-- Time Card -->
-                <div class="sidebar-card time-card">
+                <div class="card time-card">
                     <h3><i class="fas fa-hourglass-half"></i> Time</h3>
                     <div class="time-grid">
-                        <div class="time-item">
-                            <span class="time-label">Prep</span>
-                            <span class="time-value" id="timePrep">20 mins</span>
-                        </div>
-                        <div class="time-item">
-                            <span class="time-label">Cook</span>
-                            <span class="time-value" id="timeCook">25 mins</span>
-                        </div>
-                        <div class="time-item">
-                            <span class="time-label">Total</span>
-                            <span class="time-value" id="timeTotal">45 mins</span>
-                        </div>
+                        <div><span>Prep</span><strong id="timePrep">20 mins</strong></div>
+                        <div><span>Cook</span><strong id="timeCook">25 mins</strong></div>
+                        <div><span>Total</span><strong id="timeTotal">45 mins</strong></div>
                     </div>
                 </div>
                 
-                <!-- Equipment Card -->
-                <div class="sidebar-card equipment-card">
+                <div class="card equipment-card">
                     <h3><i class="fas fa-utensils"></i> Equipment</h3>
                     <ul class="equipment-list" id="equipmentList">
                         <li><i class="fas fa-check-circle"></i> Large knife</li>
                         <li><i class="fas fa-check-circle"></i> Cutting board</li>
-                        <li><i class="fas fa-check-circle"></i> Mixing bowls</li>
-                        <li><i class="fas fa-check-circle"></i> Grill or pan</li>
-                        <li><i class="fas fa-check-circle"></i> Meat thermometer</li>
                     </ul>
                 </div>
                 
-                <!-- Tags Card -->
-                <div class="sidebar-card tags-card">
+                <div class="card tags-card">
                     <h3><i class="fas fa-tags"></i> Tags</h3>
-                    <div class="tags-container" id="tagsContainer">
-                        <span class="tag">Turkish</span>
-                        <span class="tag">Kebab</span>
-                        <span class="tag">Grilled</span>
-                        <span class="tag">High Protein</span>
-                        <span class="tag">Dinner</span>
-                        <span class="tag">Traditional</span>
+                    <div class="tags" id="tagsContainer">
+                        <span>Turkish</span><span>Kebab</span>
                     </div>
                 </div>
-            </div>
+            </aside>
             
             <!-- MAIN CONTENT -->
-            <div class="recipe-main">
-                
-                <!-- Description -->
-                <div class="recipe-description">
-                    <p class="description-text" id="recipeDescription">
-                        Traditional Turkish döner with perfectly spiced meat, slow-cooked to perfection. 
-                        Served with warm pita bread, fresh vegetables, and creamy garlic sauce. 
-                        This authentic recipe brings the streets of Istanbul to your kitchen!
-                    </p>
+            <main class="recipe-main">
+                <div class="description-box">
+                    <p id="recipeDescription">Traditional Turkish döner with perfectly spiced meat, slow-cooked to perfection.</p>
                 </div>
                 
-                <!-- Ingredients -->
-                <div class="recipe-ingredients">
-                    <h2 class="section-subtitle">Ingredients</h2>
-                    
-                    <div class="serving-adjust">
-                        <span>Serving size:</span>
-                        <div class="serving-control">
-                            <button class="serving-btn" id="decreaseServing">−</button>
-                            <span class="serving-number" id="servingCount">4</span>
-                            <button class="serving-btn" id="increaseServing">+</button>
-                        </div>
-                        <span class="serving-unit">servings</span>
-                    </div>
-                    
-                    <div class="ingredients-list" id="ingredientsList">
-                        <!-- Meat -->
-                        <div class="ingredient-category">
-                            <h4>For the Meat:</h4>
-                            <ul>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing1">
-                                    <label for="ing1">500g <span class="ingredient-name">lamb or beef</span>, thinly sliced</label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing2">
-                                    <label for="ing2">3 tbsp <span class="ingredient-name">olive oil</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing3">
-                                    <label for="ing3">2 tbsp <span class="ingredient-name">yogurt</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing4">
-                                    <label for="ing4">1 tbsp <span class="ingredient-name">tomato paste</span></label>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Spices -->
-                        <div class="ingredient-category">
-                            <h4>Spices:</h4>
-                            <ul>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing5">
-                                    <label for="ing5">1 tsp <span class="ingredient-name">cumin</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing6">
-                                    <label for="ing6">1 tsp <span class="ingredient-name">paprika</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing7">
-                                    <label for="ing7">1 tsp <span class="ingredient-name">oregano</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing8">
-                                    <label for="ing8">1/2 tsp <span class="ingredient-name">black pepper</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing9">
-                                    <label for="ing9">1/2 tsp <span class="ingredient-name">salt</span></label>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- For Serving -->
-                        <div class="ingredient-category">
-                            <h4>For Serving:</h4>
-                            <ul>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing10">
-                                    <label for="ing10"><span class="ingredient-name">Pita bread</span></label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing11">
-                                    <label for="ing11"><span class="ingredient-name">Tomatoes</span>, sliced</label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing12">
-                                    <label for="ing12"><span class="ingredient-name">Onions</span>, sliced</label>
-                                </li>
-                                <li class="ingredient-item">
-                                    <input type="checkbox" id="ing13">
-                                    <label for="ing13"><span class="ingredient-name">Garlic yogurt sauce</span></label>
-                                </li>
-                            </ul>
+                <div class="ingredients-box">
+                    <h2>Ingredients</h2>
+                    <div class="serving-control">
+                        <span>Serves</span>
+                        <div class="serving-buttons">
+                            <button id="minusServing">−</button>
+                            <span id="servingCount">4</span>
+                            <button id="plusServing">+</button>
                         </div>
                     </div>
+                    <div class="ingredients-list" id="ingredientsList"></div>
                 </div>
                 
-                <!-- Instructions -->
-                <div class="recipe-instructions">
-                    <h2 class="section-subtitle">Instructions</h2>
-                    
-                    <div class="instructions-list" id="instructionsList">
-                        <div class="instruction-step">
-                            <span class="step-number">1</span>
-                            <div class="step-content">
-                                <p>In a large bowl, combine the sliced meat with olive oil, yogurt, tomato paste, and all spices. Mix well until meat is thoroughly coated.</p>
-                                <div class="step-note">⏱️ Marinate for at least 2 hours, preferably overnight.</div>
-                            </div>
-                        </div>
-                        
-                        <div class="instruction-step">
-                            <span class="step-number">2</span>
-                            <div class="step-content">
-                                <p>Preheat your grill or large pan to medium-high heat. Thread the marinated meat onto skewers if using.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="instruction-step">
-                            <span class="step-number">3</span>
-                            <div class="step-content">
-                                <p>Cook the meat for 10-12 minutes, turning occasionally, until nicely charred and cooked through. Internal temperature should reach 165°F (74°C).</p>
-                            </div>
-                        </div>
-                        
-                        <div class="instruction-step">
-                            <span class="step-number">4</span>
-                            <div class="step-content">
-                                <p>Warm the pita bread on the grill for 30 seconds per side.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="instruction-step">
-                            <span class="step-number">5</span>
-                            <div class="step-content">
-                                <p>Slice the cooked meat thinly. Serve on warm pita with fresh tomatoes, onions, and garlic yogurt sauce.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chef-tip">
+                <div class="instructions-box">
+                    <h2>Instructions</h2>
+                    <div class="instructions-list" id="instructionsList"></div>
+                    <div class="chef-tip" id="chefTip">
                         <i class="fas fa-lightbulb"></i>
-                        <div>
-                            <strong>Chef's Tip:</strong> For extra flavor, add a pinch of sumac to the yogurt sauce!
-                        </div>
+                        <div><strong>Chef's Tip:</strong> Add sumac to yogurt sauce!</div>
                     </div>
                 </div>
-            </div>
+            </main>
         </div>
     </div>
 </section>
 
 <!-- ===== RELATED RECIPES ===== -->
-<section class="related-recipes">
+<section class="related-section">
     <div class="container">
-        <h2 class="section-title">More Recipes You'll Love</h2>
-        
-        <div class="related-grid" id="relatedRecipes">
-            <!-- Recipe 1 -->
-            <div class="related-card" data-recipe="lahmacun">
-                <img src="food-blog-img/lahmachun.png" alt="Lahmacun">
-                <div class="related-info">
-                    <h4>Turkish Lahmacun</h4>
-                    <div class="related-meta">
-                        <span><i class="far fa-clock"></i> 1.5 hr</span>
-                        <span><i class="fas fa-star"></i> 5.0</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Recipe 2 -->
-            <div class="related-card" data-recipe="manti">
-                <img src="food-blog-img/manti.png" alt="Manti">
-                <div class="related-info">
-                    <h4>Handmade Manti</h4>
-                    <div class="related-meta">
-                        <span><i class="far fa-clock"></i> 2 hr</span>
-                        <span><i class="fas fa-star"></i> 4.8</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Recipe 3 -->
-            <div class="related-card" data-recipe="baklava">
-                <img src="food-blog-img/baklava.png" alt="Baklava">
-                <div class="related-info">
-                    <h4>Pistachio Baklava</h4>
-                    <div class="related-meta">
-                        <span><i class="far fa-clock"></i> 3 hr</span>
-                        <span><i class="fas fa-star"></i> 5.0</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Recipe 4 -->
-            <div class="related-card" data-recipe="kebab">
-                <img src="food-blog-img/doner-kebab.png" alt="Kebab">
-                <div class="related-info">
-                    <h4>Authentic Döner</h4>
-                    <div class="related-meta">
-                        <span><i class="far fa-clock"></i> 45 min</span>
-                        <span><i class="fas fa-star"></i> 4.9</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <h2 class="section-title">You Might Also Like</h2>
+        <div class="related-grid" id="relatedGrid"></div>
     </div>
 </section>
 
-<!-- ===== COMMENTS SECTION ===== -->
+<!-- ===== COMMENTS ===== -->
 <section class="comments-section">
     <div class="container">
-        <h2 class="section-title">Comments (24)</h2>
-        
-        <div class="comments-container">
-            <!-- Comment 1 -->
+        <h2 class="section-title">Reviews <span id="reviewCount">(24)</span></h2>
+        <div class="comments-list" id="commentsList">
             <div class="comment-card">
-                <div class="comment-avatar">
-                    <img src="food-blog-img/user-1.jpg" alt="User">
-                </div>
+                <img src="food-blog-img/user-1.jpg" alt="User">
                 <div class="comment-content">
-                    <div class="comment-header">
-                        <h4>Mehmet Yilmaz</h4>
-                        <span class="comment-date">2 weeks ago</span>
-                    </div>
-                    <div class="comment-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="comment-text">This recipe is amazing! Tastes just like the döner from my favorite spot in Istanbul. The marinade is perfect.</p>
-                </div>
-            </div>
-            
-            <!-- Comment 2 -->
-            <div class="comment-card">
-                <div class="comment-avatar">
-                    <img src="food-blog-img/user-2.jpg" alt="User">
-                </div>
-                <div class="comment-content">
-                    <div class="comment-header">
-                        <h4>Sarah Johnson</h4>
-                        <span class="comment-date">1 month ago</span>
-                    </div>
-                    <div class="comment-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <p class="comment-text">Made this for dinner last night. Everyone loved it! Will definitely make again. Thanks for sharing!</p>
+                    <div class="comment-header"><h4>Mehmet Yilmaz</h4><span>2 weeks ago</span></div>
+                    <div class="stars">★★★★★</div>
+                    <p>Amazing recipe! Tastes just like Istanbul.</p>
                 </div>
             </div>
         </div>
         
-        <!-- Add Comment -->
         <div class="add-comment">
-            <h3>Leave a Comment</h3>
-            <div class="comment-form">
-                <textarea placeholder="Share your thoughts about this recipe..." rows="4"></textarea>
-                <button class="submit-comment">Post Comment</button>
+            <h3>Leave a Review</h3>
+            <div class="rating-select">
+                <span>Your Rating:</span>
+                <div class="stars-input">
+                    <i class="far fa-star" data-rating="1"></i><i class="far fa-star" data-rating="2"></i>
+                    <i class="far fa-star" data-rating="3"></i><i class="far fa-star" data-rating="4"></i>
+                    <i class="far fa-star" data-rating="5"></i>
+                </div>
             </div>
+            <textarea placeholder="Share your experience..." rows="3"></textarea>
+            <button class="submit-btn">Post Comment</button>
         </div>
     </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
-<footer class="main-footer">
-    <div class="footer-container">
+<footer class="footer">
+    <div class="container">
         <div class="footer-logo">Healthy<span>Kitchen</span></div>
-        <div class="footer-socials">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-pinterest"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-        </div>
-        <p class="copyright">&copy; 2026 Healthy Kitchen. All rights reserved.</p>
+        <div class="footer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-pinterest"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+        <p>&copy; 2026 Healthy Kitchen. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- JavaScript -->
 <script src="js/recipe.js"></script>
 </body>
 </html>
