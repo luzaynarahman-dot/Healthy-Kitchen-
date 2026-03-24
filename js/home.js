@@ -1,111 +1,143 @@
-// ===== RECIPE CARD CLICK - SINGLE CLICK ONLY =====
-document.querySelectorAll('.card-item').forEach(card => {
-    card.addEventListener('click', function(e) {
-        e.stopPropagation(); // Stop from triggering parent container
-        const recipeId = this.dataset.recipe;
-        if (recipeId) {
-            window.location.href = `recipe.html?id=${recipeId}`;
+// ===== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
         }
     });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.scroll-section').forEach(section => {
+    observer.observe(section);
 });
 
-// ===== KITCHEN CONTAINER CLICK - ONLY IF NOT CLICKING ON RECIPE CARD =====
-document.querySelectorAll('.kitchen-section .container').forEach(container => {
-    container.addEventListener('click', function(e) {
-        // Don't redirect if clicking on recipe card or its children
-        if (e.target.closest('.card-item')) {
-            return;
-        }
-        const chef = this.dataset.chef;
-        if (chef) {
-            window.location.href = `chef-profile.html?chef=${chef}`;
-        }
-    });
-});
+// ===== CUISINE TABS FUNCTIONALITY - FIXED =====
+const tabs = document.querySelectorAll(".tab");
+const cards = document.querySelectorAll(".cuisine-cards .card");
 
-// ===== CUISINE CARD CLICK =====
-document.querySelectorAll('.cuisine-cards .card').forEach(card => {
-    card.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const recipeId = this.dataset.recipe;
-        if (recipeId) {
-            window.location.href = `recipe.html?id=${recipeId}`;
-        }
-    });
-});
+if (tabs.length > 0 && cards.length > 0) {
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            // Remove active class from all tabs
+            tabs.forEach(t => t.classList.remove("active"));
+            // Add active class to clicked tab
+            tab.classList.add("active");
 
-// ===== TAB FUNCTIONALITY =====
-const tabs = document.querySelectorAll('.tab');
-const cards = document.querySelectorAll('.cuisine-cards .card');
+            // Get the cuisine from data-cuisine attribute or text
+            const selectedCuisine = tab.dataset.cuisine || tab.textContent.toLowerCase().trim();
 
-tabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-        e.stopPropagation();
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        const selected = tab.dataset.cuisine;
-        cards.forEach(card => {
-            if (card.dataset.cuisine === selected) {
-                card.classList.add('show');
-            } else {
-                card.classList.remove('show');
-            }
+            cards.forEach(card => {
+                if (card.dataset.cuisine === selectedCuisine) {
+                    card.classList.add("show");
+                } else {
+                    card.classList.remove("show");
+                }
+            });
         });
     });
-});
+}
 
-// ===== SPOTLIGHT SAVE BUTTON =====
-const saveBtn = document.querySelector('.spotlight-featured .save-btn');
-if (saveBtn) {
-    saveBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const icon = this.querySelector('i');
-        if (icon.classList.contains('far')) {
-            icon.classList.remove('far');
-            icon.classList.add('fas');
-            this.style.background = '#e74c3c';
-            this.style.color = 'white';
-        } else {
-            icon.classList.remove('fas');
-            icon.classList.add('far');
-            this.style.background = 'transparent';
-            this.style.color = '#4caf50';
+// ===== SET INITIAL ACTIVE TAB =====
+// Make sure Turkish tab is active and Turkish cards are visible
+const activeTab = document.querySelector('.tab.active');
+if (activeTab) {
+    const initialCuisine = activeTab.dataset.cuisine || activeTab.textContent.toLowerCase().trim();
+    cards.forEach(card => {
+        if (card.dataset.cuisine === initialCuisine) {
+            card.classList.add("show");
+        }
+    });
+} else {
+    // Default: show Turkish cards
+    cards.forEach(card => {
+        if (card.dataset.cuisine === "turkish") {
+            card.classList.add("show");
         }
     });
 }
 
-// ===== SPOTLIGHT RECIPE BUTTON =====
-const recipeBtn = document.querySelector('.spotlight-featured .recipe-btn');
-if (recipeBtn) {
-    recipeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        window.location.href = 'recipe.html?id=grilled-fish';
-    });
+// ===== ADD INTERACTION BUTTONS TO CUISINE CARDS =====
+const allCards = document.querySelectorAll('.cuisine-cards .card');
+
+allCards.forEach(card => {
+    if (!card.querySelector('.card-interactions')) {
+        const btnHTML = `
+            <div class="card-interactions">
+                <button class="bookmark-btn">
+                    <i class="fa-regular fa-bookmark"></i>
+                </button>
+                <button class="love-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        `;
+        const cardInfo = card.querySelector('.card-info');
+        if (cardInfo) {
+            cardInfo.insertAdjacentHTML('beforeend', btnHTML);
+        }
+    }
+});
+
+// ===== LOGIN FUNCTIONALITY (if on login page) =====
+function login() {
+    const usernameInput = document.querySelector('input[type="text"], input[type="email"]');
+    const passwordInput = document.getElementById('password');
+
+    if (usernameInput && passwordInput) {
+        if (usernameInput.value && passwordInput.value) {
+            alert("Login Successful!");
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Please fill in both fields!");
+        }
+    }
 }
 
-// ===== PREVIEW CARD CLICK =====
-const previewCard = document.querySelector('.preview-card');
-if (previewCard) {
-    previewCard.addEventListener('click', () => {
-        window.location.href = 'recipe.html?id=fajita';
-    });
+// ===== REGISTER FUNCTIONALITY (if on register page) =====
+function registerUser() {
+    const inputs = document.querySelectorAll('.input-box input');
+    const checkbox = document.querySelector('input[type="checkbox"]');
+    
+    if (inputs.length > 0 && checkbox) {
+        let allFilled = true;
+        inputs.forEach(input => {
+            if (!input.value) allFilled = false;
+        });
+
+        if (allFilled && checkbox.checked) {
+            alert("Account Created Successfully!");
+            window.location.href = "login.html";
+        } else if (!checkbox.checked && allFilled) {
+            alert("Please agree to the terms and conditions!");
+        } else {
+            alert("Please fill in all the required fields!");
+        }
+    }
 }
 
-// ===== SEARCH =====
+// ===== SEARCH FUNCTIONALITY =====
 const searchBtn = document.querySelector('.search-btn');
 const searchInput = document.querySelector('.search-input');
 
 if (searchBtn && searchInput) {
     searchBtn.addEventListener('click', () => {
-        const query = searchInput.value.trim();
-        if (query) alert(`Searching for "${query}"...`);
+        if (searchInput.value.trim()) {
+            alert(`Searching for: ${searchInput.value}`);
+        } else {
+            alert('Please enter something to search');
+        }
     });
+    
     searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') searchBtn.click();
+        if (e.key === 'Enter') {
+            searchBtn.click();
+        }
     });
 }
 
-// ===== NEWSLETTER =====
+// ===== NEWSLETTER SUBSCRIBE =====
 const subscribeBtn = document.querySelector('.subscribe-btn');
 const emailInput = document.querySelector('.newsletter-box input');
 
@@ -116,27 +148,9 @@ if (subscribeBtn && emailInput) {
             alert('Thanks for subscribing! 🎉');
             emailInput.value = '';
         } else {
-            alert('Please enter a valid email');
+            alert('Please enter a valid email address');
         }
     });
 }
 
-// ===== SCROLL ANIMATION =====
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, { threshold: 0.2 });
-
-document.querySelectorAll('.scroll-section').forEach(section => {
-    observer.observe(section);
-});
-
-// ===== INITIAL CUISINE CARDS =====
-document.querySelectorAll('.card[data-cuisine="turkish"]').forEach(card => {
-    card.classList.add('show');
-});
-
-console.log('✅ All click handlers loaded - No double click issues!');
+console.log('✅ script.js loaded - Cuisine tabs working!');
